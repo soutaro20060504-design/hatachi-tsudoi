@@ -7,7 +7,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yuji+Mai&family=BIZ+UDPGothic:wght@400;700&family=Mrs+Saint+Delafield&family=Questrial&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@700&family=BIZ+UDPGothic:wght@400;700&family=Mrs+Saint+Delafield&family=Questrial&display=swap">
 </head>
 <body>
 <style>
@@ -18,7 +18,7 @@
   --blue:#3565a6;
   --ink:#2d5a96;
   --white:#fffdfd;
-  --f-brush:"Yuji Mai","Yu Mincho",serif;                        /* 見出し：細い筆文字（控えめな達筆＝大人っぽい印象） */
+  --f-brush:"BIZ UDPMincho","Yu Mincho",serif;                   /* 見出し：UD明朝の太字（判読しやすく式典らしい） */
   --f-script:"Mrs Saint Delafield","Brush Script MT",cursive;
   --f-body:"BIZ UDPGothic","Hiragino Sans","Yu Gothic",sans-serif; /* 本文：UDゴシック */
   --tab-h:64px;
@@ -30,6 +30,10 @@ body{background:var(--pink);color:var(--ink);font-family:var(--f-body);
   -webkit-text-size-adjust:100%;overflow-x:hidden}
 p{margin:0}
 h1,h2,h3{margin:0;font-weight:400}
+.tate,.h2,.closing .big,.datebox .d,.count b,.sp-n b,.tl .t{font-weight:700}
+.tbd-box{border:1.5px dashed currentColor;border-radius:8px;padding:12px 16px;font-size:14px;line-height:1.7;opacity:.85}
+.tbd-box b{letter-spacing:.15em;margin-right:.6em}
+
 a{color:inherit}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px dashed currentColor;outline-offset:3px}
 img{display:block;max-width:100%}
@@ -292,9 +296,8 @@ details p+p{margin-top:8px}
       <span class="eng rv">Memories</span>
       <h2 class="h2 rv">フォトスポットと記念品</h2>
       <div class="qa">
-        <div class="rv"><h3>フォトスポット 紹介</h3><p>今年のフォトスポットは、実行委員の福田杏奈さん（華陵高校）と吉野千尋さん（下松高校）によるデザインです。皆さんがご家族やお友達と一緒に、沢山の思い出をつくれるよう、心を込めて作成しました。</p></div>
-        <div class="rv"><h3>成人証書・書道作品</h3><p>特に成人証書は、今年度20歳を迎えた秋本結衣さん（下松中学校出身）に揮毫いただきました。書道アーティスト雅宵さんの『感謝』と『夢』もございます。ぜひ、記念に写真撮影をお楽しみください！！</p></div>
-        <div class="rv"><h3>記念品 紹介</h3><p>“星ふるまちくだまつ”をイメージしたおしゃれなロゴ入りの実用的なUSBです。未来への思い出や大切な瞬間を、この中に刻んでください！</p></div>
+        <div class="rv"><h3>フォトスポット 紹介</h3><p class="tbd-box"><b>未記入</b>令和9年の内容が決まり次第、掲載します。</p></div>
+        <div class="rv"><h3>記念品 紹介</h3><p class="tbd-box"><b>未記入</b>令和9年の内容が決まり次第、掲載します。</p></div>
       </div>
     </section>
     <section class="pad" style="position:relative">
@@ -308,19 +311,20 @@ details p+p{margin-top:8px}
     </section>
     <div class="closing pad">
       <span class="eng">Congratulations</span>
-      <p class="big">おめでとう<br>ございます！</p>
+      <p class="big">二十歳、<br>おめでとう！</p>
       <div class="msg">
-        <p>20歳を迎えられた皆さんおめでとうございます！皆様の新たな門出の日を、共に迎えることができ大変嬉しく思います。</p>
-        <p>これからの歩みが、希望と笑顔に満ちたものとなりますよう、心よりお祈り申し上げます。</p>
-        <p style="text-align:right">二十歳のつどい実行委員会 一同</p>
+        <p>二十歳を迎えた皆さん、おめでとうございます！</p>
+        <p>同じ下松で育った仲間と、こうしてまた顔を合わせられることを、実行委員一同とても嬉しく思っています。</p>
+        <p>今日が、これまで支えてくれた人たちへの感謝と、これからの自分への期待を感じられる一日になりますように。皆さんの新しい一歩を、心から応援しています。</p>
+        <p style="text-align:right">令和9年 下松市二十歳のつどい実行委員会 一同</p>
       </div>
       <svg class="bow line-art" viewBox="0 0 220 150" aria-hidden="true"><g>
         <path d="M110 52 q-30 -40 -70 -36 q-26 4 -18 30 q10 26 88 12z"/><path d="M110 52 q30 -40 70 -36 q26 4 18 30 q-10 26 -88 12z"/><path d="M100 48 h20 v14 h-20z"/><path d="M104 62 q-20 40 -48 80 M116 62 q20 40 48 80"/></g></svg>
     </div>
     <div class="members pad">
       <p><b>主催</b>下松市・下松市教育委員会</p>
-      <p><b>ギフト部会</b>廣瀬 碧、末岡 真采、井上 夕夏、梶原 心花、椙山 姫愛</p>
-      <p><b>企画部会</b>竹尾 澪乃、戸高 大輔、福田 杏奈、吉野 千尋</p>
+      <p><b>ギフト部会</b><span class="tbd-box" style="padding:3px 10px;display:inline-block">未記入（決まり次第掲載）</span></p>
+      <p><b>企画部会</b><span class="tbd-box" style="padding:3px 10px;display:inline-block">未記入（決まり次第掲載）</span></p>
     </div>
   </div>
 </div>

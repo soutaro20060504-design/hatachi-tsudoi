@@ -7,7 +7,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yuji+Mai&family=Mrs+Saint+Delafield&family=Cormorant+SC:wght@500;600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Questrial&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+SC:wght@500;600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Questrial&display=swap">
 </head>
 <body>
 <style>
@@ -19,7 +19,7 @@
   --ink:#2d5a96;
   --white:#fffdfd;
   --gold:#c9a24a;
-  --f-brush:"Yuji Mai","Yuji Syuku","Shippori Mincho","Yu Mincho",serif;   /* 和文の見出し：筆で書いたような細い筆文字 */
+  --f-brush:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;      /* 和文の見出し：丸ゴシックの太字 */
   --f-script:"Mrs Saint Delafield","Brush Script MT",cursive;              /* 欧文の飾り文字：Canvaの手書き英字の役 */
   --f-label:"Cormorant SC","Shippori Mincho",serif;                         /* 欧文スモールキャップ：Canvaの小見出しの役 */
   --f-mincho:"Shippori Mincho","Yu Mincho",serif;                           /* 和文の小見出し */
@@ -51,7 +51,7 @@ img{display:block;max-width:100%}
 .hero h1{font-family:var(--f-brush);font-size:clamp(52px,12vw,104px);line-height:1.1;letter-spacing:.06em}
 .hero h1 small{display:block;font-family:var(--f-mincho);font-size:clamp(14px,2.4vw,18px);letter-spacing:.5em;margin-bottom:14px;font-weight:600}
 .hero .when{font-family:var(--f-mincho);font-size:clamp(14px,2.4vw,17px);letter-spacing:.25em;font-weight:600}
-.write{display:inline-block;clip-path:inset(0 0 0 0)}
+.write{display:inline-block}
 .cta-row{display:flex;align-items:center;justify-content:center;gap:clamp(12px,5vw,60px);flex-wrap:wrap}
 .pill{font-family:var(--f-brush);font-size:18px;letter-spacing:.12em;border:1.5px solid var(--ink);border-radius:50%;padding:8px 30px;text-decoration:none;transition:background .3s,color .3s,transform .3s}
 .pill:hover,.pill:focus-visible{background:var(--ink);color:var(--pink);transform:translateY(-2px) rotate(-2deg)}
@@ -161,6 +161,8 @@ img{display:block;max-width:100%}
 .qa p{font-size:14px}
 .qa p + p{margin-top:6px}
 
+.tbd-box{border:1.5px dashed currentColor;border-radius:8px;padding:12px 16px;font-size:14px;line-height:1.7;opacity:.85}
+.tbd-box b{letter-spacing:.15em;margin-right:.6em}
 /* ===== closing ===== */
 .closing{text-align:center;display:grid;justify-items:center;gap:28px;padding-block:72px 40px;position:relative}
 .closing .eng{font-size:clamp(46px,9vw,80px)}
@@ -183,7 +185,8 @@ img{display:block;max-width:100%}
 .js .sp.rv.pre .sp-photo{transform:scale(.94)}
 .sp-photo{transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
 
-@keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+/* 筆記体の飾りや「g」の下が切れないよう、上下左右に余白をとって表示する */
+@keyframes wipe{from{clip-path:inset(-50% 100% -50% -15%)}to{clip-path:inset(-50% -15% -50% -15%)}}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .load .write{animation:wipe 1.8s cubic-bezier(.65,.05,.36,1) both}
 .load .w2{animation-delay:.5s}
@@ -223,7 +226,7 @@ img{display:block;max-width:100%}
 
 [lang="ja"] p,[lang="ja"] h1,[lang="ja"] h2,[lang="ja"] h3,[lang="ja"] li,[lang="ja"] .item{word-break:auto-phrase}
 .ver{position:fixed;z-index:20;right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--pink);font-size:12px;letter-spacing:.08em;padding:6px 14px;border-radius:99px;font-family:var(--f-body);box-shadow:0 2px 10px rgba(0,0,0,.15)}
-
+.hero h1{font-weight:900;letter-spacing:.08em}.sec-title h2,.charter h2,.faq h2,.closing .big,.arch .v,.gift-arch .num,.pill{font-weight:700}
 </style>
 
 <!-- ===================== HERO ===================== -->
@@ -448,13 +451,11 @@ img{display:block;max-width:100%}
       <div class="qa">
         <div>
           <h3>フォトスポット 紹介</h3>
-          <p>今年のフォトスポットは、実行委員の福田杏奈さん（華陵高校）と吉野千尋さん（下松高校）によるデザインです。皆さんがご家族やお友達と一緒に、沢山の思い出をつくれるよう、心を込めて作成しました。</p>
-          <p>特に成人証書は、今年度20歳を迎えた秋本結衣さん（下松中学校出身）に揮毫いただきました。</p>
-          <p>書道アーティスト雅宵さんの『感謝』と『夢』もございます。ぜひ、記念に写真撮影をお楽しみください！！</p>
+          <p class="tbd-box"><b>未記入</b>令和9年の内容が決まり次第、掲載します。</p>
         </div>
         <div>
           <h3>記念品 紹介</h3>
-          <p>“星ふるまちくだまつ”をイメージしたおしゃれなロゴ入りの実用的なUSBです。未来への思い出や大切な瞬間を、この中に刻んでください！</p>
+          <p class="tbd-box"><b>未記入</b>令和9年の内容が決まり次第、掲載します。</p>
         </div>
       </div>
     </div>
@@ -462,11 +463,12 @@ img{display:block;max-width:100%}
 
   <div class="closing">
     <span class="eng rv">Congratulations</span>
-    <p class="big rv">おめでとうございます！</p>
+    <p class="big rv">二十歳、おめでとう！</p>
     <div class="msg rv">
-      <p>20歳を迎えられた皆さんおめでとうございます！皆様の新たな門出の日を、共に迎えることができ大変嬉しく思います。</p>
-      <p>これからの歩みが、希望と笑顔に満ちたものとなりますよう、心よりお祈り申し上げます。</p>
-      <p>二十歳のつどい実行委員会 一同</p>
+      <p>二十歳を迎えた皆さん、おめでとうございます！</p>
+      <p>同じ下松で育った仲間と、こうしてまた顔を合わせられることを、実行委員一同とても嬉しく思っています。</p>
+      <p>今日が、これまで支えてくれた人たちへの感謝と、これからの自分への期待を感じられる一日になりますように。皆さんの新しい一歩を、心から応援しています。</p>
+      <p>令和9年 下松市二十歳のつどい実行委員会 一同</p>
     </div>
     <svg class="bow line-art draw" viewBox="0 0 220 150" aria-hidden="true"><g>
       <path pathLength="1" d="M110 52 q-30 -40 -70 -36 q-26 4 -18 30 q10 26 88 12z"/>
@@ -477,8 +479,8 @@ img{display:block;max-width:100%}
   </div>
   <div class="foot">
     <div><b>Host</b>下松市・下松市教育委員会</div>
-    <div><b>Gift Team</b>廣瀬 碧、末岡 真采、井上 夕夏、梶原 心花、椙山 姫愛</div>
-    <div><b>Planning Team</b>竹尾 澪乃、戸高 大輔、福田 杏奈、吉野 千尋</div>
+    <div><b>Gift Team</b><span class="tbd-box" style="padding:4px 10px">未記入（決まり次第掲載）</span></div>
+    <div><b>Planning Team</b><span class="tbd-box" style="padding:4px 10px">未記入（決まり次第掲載）</span></div>
   </div>
 </div>
 

@@ -30,7 +30,7 @@ body{background:var(--pink);color:var(--ink);font-family:var(--f-body);
   -webkit-text-size-adjust:100%;overflow-x:hidden}
 p{margin:0}
 h1,h2,h3{margin:0;font-weight:400}
-.tate,.h2,.closing .big,.datebox .d,.count b,.sp-n b,.tl .t{font-weight:700}
+.tate,.h2,.closing .big,.datebox .d,.sp-n b,.tl .t{font-weight:700}
 .tbd-box{border:1.5px dashed currentColor;border-radius:8px;padding:12px 16px;font-size:14px;line-height:1.7;opacity:.85}
 .tbd-box b{letter-spacing:.15em;margin-right:.6em}
 
@@ -58,8 +58,6 @@ section{padding-block:56px 8px;scroll-margin-top:12px}
 .datebox{border:1.5px solid var(--ink);border-radius:999px 999px 8px 8px;padding:26px 14px 16px;text-align:center;display:grid;gap:2px;max-width:170px}
 .datebox .d{font-family:var(--f-brush);font-size:40px;line-height:1.1}
 .datebox .w{font-size:13px;letter-spacing:.15em}
-.count{font-size:14px;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
-.count b{font-family:var(--f-brush);font-size:30px;font-weight:400;font-variant-numeric:tabular-nums}
 .toast{width:84px;height:70px;color:var(--ink)}
 .toast .gl{transform-box:fill-box}
 .toast .gl-l{transform-origin:100% 100%}
@@ -170,7 +168,6 @@ details p+p{margin-top:8px}
       <span class="eng">Coming of Age</span>
       <p class="yr">令和九年　下松市</p>
       <div class="datebox"><span class="w">2027</span><span class="d">1.10</span><span class="w">SUNDAY</span></div>
-      <p class="count" id="count" hidden>式典まで あと<b id="days">0</b>日</p>
       <svg class="toast line-art" viewBox="0 0 110 96" aria-hidden="true">
         <g class="gl gl-l"><path d="M14 24 h32 q-2 20 -16 23 q-14 -3 -16 -23z"/><path d="M18 33 q12 3 24 0"/><path d="M30 47 v22 M20 70 h20"/></g>
         <g class="gl gl-r"><path d="M64 24 h32 q-2 20 -16 23 q-14 -3 -16 -23z"/><path d="M68 33 q12 3 24 0"/><path d="M80 47 v22 M70 70 h20"/></g>
@@ -338,12 +335,6 @@ details p+p{margin-top:8px}
 
 <script>
 (function(){
-  // カウントダウン（式典 2027-01-10 10:30 JST）
-  // 日本時間の日付どうしで数える
-  var now=new Date(Date.now()+9*3600000), today=Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate());
-  var d=Math.round((Date.UTC(2027,0,10)-today)/86400000);
-  if(d>0){ document.getElementById('days').textContent=d; document.getElementById('count').hidden=false; }
-
   // カルーセルのドット
   var rail=document.getElementById('rail'),cards=[].slice.call(rail.children),dots=document.getElementById('dots');
   cards.forEach(function(){dots.appendChild(document.createElement('i'));});
